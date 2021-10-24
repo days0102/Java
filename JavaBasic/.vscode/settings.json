@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 20,
+
+    //vscode-fileheader插件设置
+    "fileheader.Author": "Outsider",
+    "fileheader.LastModifiedBy": "Outsider",
+}
