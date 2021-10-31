@@ -1,4 +1,11 @@
-import java.sql.SQLOutput;
+/*
+ * @Author: Outsider
+ * @Date: 2021-05-09 20:32:00
+ * @LastEditors: Outsider
+ * @LastEditTime: 2021-10-30 19:19:39
+ * @Description: In User Settings Edit
+ * @FilePath: \Java\JavaBasic\src\Basic.java
+ */
 import java.util.Scanner;
 
 public class Basic {
