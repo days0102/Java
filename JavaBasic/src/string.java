@@ -18,7 +18,7 @@ public class string {
         String repeat = "Java".repeat(3);
         System.out.println(repeat);
 
-        // 检测字符串是否相等（不可是用==）s.equals(t),s和t可以是字符串变量和字面量
+        // 检测字符串是否相等（不可以用==）s.equals(t),s和t可以是字符串变量和字面量
         str.equals(str1);
         "Hello".equals(str);
         "hello".equalsIgnoreCase(str);// 不区分大小写
