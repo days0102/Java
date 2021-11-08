@@ -2,7 +2,7 @@
  * @Author: Outsider
  * @Date: 2021-10-30 20:40:19
  * @LastEditors: Outsider
- * @LastEditTime: 2021-10-31 20:42:30
+ * @LastEditTime: 2021-11-07 23:08:23
  * @Description: In User Settings Edit
  * @FilePath: \Java\JavaBasic\src\Inheritance.java
  */
@@ -13,10 +13,11 @@ public class Inheritance {
         var manage=new Manager("Lin", 20000, 20);
         var name=manage.getName();
         System.out.println(name);
+        
         Employee employee=manage;
         System.out.println(employee.getSalary());
         var staff=new Employee("Tom", 18000, 2021, 10, 31, 20);
-        if(staff instanceof Manager)//使用instanceof检查是否能够转换成功
+        if(staff instanceof Manager)//#使用instanceof检查是否能够转换成功
         {
             manage=(Manager)staff;
             System.out.println("转换成功");
@@ -52,6 +53,8 @@ public class Inheritance {
 
 
 final class testfinal{//#final修饰的类不能被继承
+
+    //!private的内容对其他类都是不可见的，即使子类也不能访问
     private int num;//#被final修饰的类的字段不是final
 
     public int getNum(){//#被final修饰的类的方法自动成为final
