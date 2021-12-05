@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 /*
  * @Author: Outsider
  * @Date: 2021-10-30 20:40:19
  * @LastEditors: Outsider
- * @LastEditTime: 2021-11-07 23:08:23
+ * @LastEditTime: 2021-11-23 23:50:03
  * @Description: In User Settings Edit
  * @FilePath: \Java\JavaBasic\src\Inheritance.java
  */
@@ -19,9 +21,34 @@ public class Inheritance {
         var staff=new Employee("Tom", 18000, 2021, 10, 31, 20);
         if(staff instanceof Manager)//#使用instanceof检查是否能够转换成功
         {
-            manage=(Manager)staff;
-            System.out.println("转换成功");
+            System.out.println("可以成功");
         }
+        //equals方法
+        System.out.println(manage.equals(staff));
+        //getClass方法返回一个对象所属的类
+        System.out.println(staff.getClass());
+        //toString返回表示对象值的一个字符串
+        System.out.println(staff.toString());
+        System.out.println(""+staff);//与调用toString()一样
+        System.out.println(staff);//会调用toString()方法
+
+
+        //泛型数组
+        ArrayList<Employee> staff_list=new ArrayList<>();
+        //ArrayList<Employee> staff_list=new ArrayList<Employee>();
+        //var staff_list=new ArrayList<Employee>();
+        var stl=new ArrayList<>();//如果没指定泛型类型默认为Object
+
+        //添加对象到泛型数组
+        staff_list.add(staff);
+        //返回数组元素个数size()
+        System.out.println(staff_list.size());
+        //获取数组元素
+        System.out.print(staff_list.get(0));//获取下标为0的元素
+        //设置数组元素set()
+        staff_list.set(0, staff);//set()只能用于修改数组元素，而不能增加元素（index不能大于等于数组长度）
+        //删除元素
+        staff_list.remove(0);//删除下标为0的元素
     }
     
 }
