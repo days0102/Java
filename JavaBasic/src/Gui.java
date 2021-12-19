@@ -35,8 +35,8 @@ public class Gui {
 
             JLabel label1=new JLabel("用户名:");
             JLabel label2=new JLabel("密码:");
-            label1.setBounds(100,100,60,30);
-            label2.setBounds(100,200,60,30);
+            label1.setBounds(50,50,60,30);
+            label2.setBounds(50,100,60,30);
 
             JButton button1 = new JButton("确定");
             JButton button2=new JButton("取消");
@@ -45,13 +45,13 @@ public class Gui {
             button2.addActionListener(new EventAction());
             button2.setBounds(100,200,60,30);
             JButton button=new JButton("登录");
-            button.setBounds(130,300,30,20);
+            button.setBounds(60,150,60,30);
             button.addActionListener(new EventAction());
 
             JTextField text1=new JTextField();
-            text1.setBounds(180,100,80,30);
+            text1.setBounds(100,50,150,30);
             JTextField text2=new JTextField();
-            text2.setBounds(180,200,80,30);
+            text2.setBounds(100,100,150,30);
             frame.getContentPane().setLayout(null);
 
             frame.add(label1);
@@ -105,7 +105,7 @@ class ButtonPanel {
         button2.setBounds(50,20,30,15);
         //showMessageDialog(null,"!!");
     }
-};
+}
 
 class EventAction implements ActionListener {
 
@@ -113,4 +113,4 @@ class EventAction implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         showMessageDialog(null,"!");
     }
-};
+}
