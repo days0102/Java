@@ -18,10 +18,11 @@ public class SocketClient {
             // 端口号
             int port = 9999;
             // 创建Socket连接
-            Socket socket = new Socket("0.0.0.0", port);
-            OutputStream os= socket.getOutputStream();
+            //Socket socket = new Socket("localhost", port);
+            Socket socket=new Socket();
 
-            os.write("!!!".getBytes());
+//            OutputStream os= socket.getOutputStream();
+//                os.write("我是客户端".getBytes());
             
         } catch (Exception e) {
             e.printStackTrace();

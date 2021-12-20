@@ -1,6 +1,4 @@
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -19,20 +17,23 @@ public class SocketServer {
             //创建服务器地址
             ServerSocket serverSocket = new ServerSocket(9999);
 
-            while (true) {
-                //等待客户端连接
-                Socket socket = serverSocket.accept();
+            //等待客户端连接
+            System.out.println("等待客户端连接");
+            Socket socket = serverSocket.accept();
+            System.out.println("客户端连接成功");
 
-                //读取客户端消息
-                int read = socket.getInputStream().read();
-
-                byte[] buffer = new byte[1024];
-                while (read != -1) {
-                    System.out.println(new String(buffer,0,read));
-                }
-
-            }
-        } catch (IOException e) {
+//            //读取客户端消息
+//            var is = socket.getInputStream();//获取一个socket对象的输入流
+//
+//            var baos = new ByteArrayOutputStream();
+//            int len = 0;
+//            byte[] buffer = new byte[1024];
+//            while ((len = is.read(buffer)) != -1) {
+//                baos.write(buffer, 0, len);
+//            }
+//            System.out.println("收到了来自于客户端" + socket.getInetAddress().getHostName()
+//                    + "的消息：" + baos.toString());
+        }catch (IOException e) {
             e.printStackTrace();
         } finally {
 
